@@ -1,0 +1,77 @@
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/navbar-login.ejs') %>
+
+    <div class="container">
+        <div class="card">
+            <br>
+            <div class="card-header">
+                <h2>
+                    Criação do torneio
+                </h2>
+            </div>
+            <div class="card-body">
+                <form>
+                    <input class="form-control" type="text" placeholder="Digite o nome do torneio" readonly>
+
+
+                    <br>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+                        <label class="form-check-label" for="inlineRadio2">Feminino</label>
+                    </div>
+                    
+
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+
+                        <div class="col">
+                            <label for="inputPassword4">Telefone</label>
+                            <input type="text" class="form-control" id="Telefone" placeholder="Telefone">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputAddress">Endereço da quadra</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Nome da sua rua">
+                        </div>
+                        <div class="col">
+                            <label for="inputCity">Cidade</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="Digite o nome da cidade">
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputPassword4">Quantidade de duplas</label>
+                            <input type="text" class="form-control" id="duplas" placeholder="duplas">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-success">Criar</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+
+                    
+
+
+
+<%- include ('../partials/footer.ejs') %>

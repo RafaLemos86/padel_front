@@ -1,5 +1,7 @@
-<%- include ('partials/header.ejs') %>
-<%- include ('partials/navbar.ejs') %>
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/navbar.ejs') %>
+
+
 <div class="container">
     <!-- mt = margin-top -->
     <!-- mb = margin=botton -->
@@ -7,26 +9,21 @@
     <div class="card mt-4">
         <div class="card-header">
             <h2>
-                Login de admin
+                Criação de Usuário
             </h2>
         </div>
         <div class="card-body">
-            <form action="/authenticate" method="post">
+            <form action="/users/create" method="post">
                 <input class="form-control" type="email" name="email" placeholder="email@example.com">
                 <br>
                 <input class="form-control" type="password" name="password" placeholder="*********">
                 <br>
                 <button type="submit" class="btn btn-success btn-block">
-                    Logar
+                    Criar
                 </button>
-                <br>
-                <br>
-                <a href="/create" class="btn" style="background-color: #acd1ec";>
-                    Criar Conta
-                </a>
             </form>
         </div>        
     </div>
 </div>
 
-<%- include ('partials/footer.ejs') %>
+<%- include ('../partials/footer.ejs') %>

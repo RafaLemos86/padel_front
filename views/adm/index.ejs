@@ -1,5 +1,5 @@
-<%- include ('partials/header.ejs') %>
-<%- include ('partials/navbar.ejs') %>
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/navbar-login.ejs') %>
 
     <body>
         <div class="container">
@@ -10,18 +10,17 @@
                 </h1>
                 <hr>
                 <p class="lead">
-                    Esse sistema foi feito para a inscrição e realização dos torneios
+                    Esta é a área excluisiva para administradores
                 </p>
                 <hr class="my-4">
                 <p>
-                    Para mais informações, acesse nosso contato no botão abaixo
+                    Para criar um novo torneio, aperte no botão a baixo
                 </p>
-                <a class="btn btn-primary btn-lg" href="" role="button">
-                    Contato
+                <a class="btn btn-primary btn-lg" href="/adm/create" role="button">
+                    Criar
                 </a>
             </div>
         </div>
     </body>
 
-
-<%- include ('partials/footer.ejs') %>
+<%- include ('../partials/footer.ejs') %>

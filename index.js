@@ -12,20 +12,36 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-app.get('/new', (req, res) => {
-    res.render('new');
+app.get('/inscricao', (req, res) => {
+    res.render('chave/inscricao');
 })
 
 app.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login/login')
 })
 
 app.get('/create', (req, res) => {
-    res.render('criaLogin')
+    res.render('login/criaLogin')
 })
 
 app.get('/chaveamento', (req, res) => {
-    res.render('chaveamento')
+    res.render('chave/chaveamento')
+})
+
+app.get('/chaveamento/semi-final', (req, res) => {
+    res.render('chave/semi-final')
+})
+
+app.get('/chaveamento/final', (req, res) => {
+    res.render('chave/final')
+})
+
+app.get('/adm/index', (req, res) => {
+    res.render('adm/index')
+})
+
+app.get('/adm/create', (req, res) => {
+    res.render('adm/criaTorneio')
 })
 
 // iniciar aplicacao 
