@@ -10,8 +10,8 @@
                 </h2>
             </div>
             <div class="card-body">
-                <form>
-                    <input class="form-control" type="text" placeholder="Digite o nome do torneio" readonly>
+                <form method="post" action="/adm/save">
+                    <input class="form-control" type="text" placeholder="Digite o nome do torneio" name="titulo">
 
 
                     <br>
@@ -30,12 +30,12 @@
                     <div class="row">
                         <div class="col">
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
                         </div>
 
                         <div class="col">
                             <label for="inputPassword4">Telefone</label>
-                            <input type="text" class="form-control" id="Telefone" placeholder="Telefone">
+                            <input type="text" class="form-control" id="Telefone" placeholder="Telefone" name="telefone">
                         </div>
                     </div>
 
@@ -44,11 +44,11 @@
                     <div class="row">
                         <div class="col">
                             <label for="inputAddress">Endereço da quadra</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Nome da sua rua">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Nome da sua rua" name="endereco">
                         </div>
                         <div class="col">
                             <label for="inputCity">Cidade</label>
-                            <input type="text" class="form-control" id="inputCity" placeholder="Digite o nome da cidade">
+                            <input type="text" class="form-control" id="inputCity" placeholder="Digite o nome da cidade" name="cidade">
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col">
                             <label for="inputPassword4">Quantidade de duplas</label>
-                            <input type="text" class="form-control" id="duplas" placeholder="duplas">
+                            <input type="text" class="form-control" id="duplas" placeholder="duplas" name="duplas">
                         </div>
                     </div>
                     <br>

@@ -10,13 +10,15 @@
                 </h2>
             </div>
             <div class="card-body">
-                <form>
+                <form method="post" action="/inscricao/save">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Nome">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" placeholder="Nome" name="nome">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Sobrenome">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenome">
                         </div>
                     </div>
 
@@ -36,22 +38,22 @@
                     <div class="row">
                         <div class="col">
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
                         </div>
 
                         <div class="col">
                             <label for="inputPassword4">Telefone</label>
-                            <input type="text" class="form-control" id="Telefone" placeholder="Telefone">
+                            <input type="text" class="form-control" id="Telefone" placeholder="Telefone" name="telefone">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputAddress">Endereço</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Nome da sua rua">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Nome da sua rua" name="endereco">
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Complemento</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">  
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc." name="complemento">  
                     </div>
                     <br>
                     <div class="row">
