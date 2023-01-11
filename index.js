@@ -4,23 +4,6 @@ const express = require('express');
 const app = express();
 // importando body-parse
 const bodyParser = require('body-parser');
-// carregando conexao do banco
-const connection = require('./database/database');
-// importando express-session
-const session = require('express-session')
-
-const adminAuth = require('./middlewares/adminAuth')
-
-
-const Inscricaocontroller = require('./controller/inscricaoController')
-const Usercontroller = require('./controller/loginController')
-const Torneiocontroller = require('./controller/torneioController')
-
-
-const User = require('./controller/UsersLogin')
-const Inscricao = require('./controller/UserInscricao')
-const Torneio = require('./controller/Usertorneio')
-
 
 
 app.set('view engine', 'ejs');
@@ -70,16 +53,6 @@ app.get('/adm/create', (req, res) => {
 
 
 
-
-// configurando sessao
-app.use(session({
-    secret: 'textoqualquerparaaumentarseguranca',
-    cookie: {
-        maxAge: 30000000
-    }
-}));
-
-
 // carregando arquivos estaticos no express
 app.use(express.static('public'))
 
@@ -89,21 +62,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-
-app.use('/', Usercontroller);
-app.use('/', Inscricaocontroller)
-app.use('/', Torneiocontroller)
-
-
-
-// CONECTANDO NO BANCO
-connection
-    .authenticate()
-    .then(() => {
-        console.log('Conectado com o banco')
-    }).catch((error) => {
-        console.log(error)
-    });
 
 
 // iniciar aplicacao 
