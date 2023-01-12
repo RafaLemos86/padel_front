@@ -43,20 +43,22 @@ app.get('/adm/create', (req, res) => {
     res.render('adm/criaTorneio')
 })
 
-<<<<<<< HEAD
 app.get('/duplas', (req, res) => {
     res.render('duplas/criaDuplas')
 })
 
-// iniciar aplicacao 
-=======
+app.get('/adm/quadra', (req, res) => {
+    res.render('adm/criaQuadra')
+})
+
+
 app.use(express.static('public'))
 app.use(express.urlencoded({
     extended: false
 }));
 app.use(express.json());
 
->>>>>>> 900245de2c7213f285705cf770c7ce472b8a82c8
+
 app.listen(8080, () => {
     console.log('servidor aberto na porta 8080')
 });

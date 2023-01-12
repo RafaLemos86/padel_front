@@ -1,0 +1,48 @@
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/navbar-login.ejs') %>
+
+    <div class="container">
+        <div class="card">
+            <br>
+            <div class="card-header">
+                <h2>
+                    Criação da Quadra
+                </h2>
+            </div>
+            <div class="card-body">
+                <form method="post" action="/adm/save">
+                    <label for="">Nome</label>
+                    <input class="form-control" type="text" placeholder="Digite o nome da Quadra" name="titulo">
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputAddress">Endereço</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Nome da sua rua" name="endereco">
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputPassword4">Quantidade de Campos</label>
+                            <input type="text" class="form-control" id="campos" placeholder="quantidade de campos" name="campos">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-success">Criar</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+
+                    
+
+
+
+<%- include ('../partials/footer.ejs') %>
