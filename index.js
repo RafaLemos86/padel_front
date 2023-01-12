@@ -44,6 +44,10 @@ app.get('/adm/create', (req, res) => {
     res.render('adm/criaTorneio')
 })
 
+app.get('/duplas', (req, res) => {
+    res.render('duplas/criaDuplas')
+})
+
 // iniciar aplicacao 
 app.listen(8080, () => {
     console.log('servidor aberto na porta 8080')
