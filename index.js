@@ -1,13 +1,7 @@
-// conectando ao express
 const express = require('express');
-// importando express
 const app = express();
-// importando body-parse
-const bodyParser = require('body-parser');
-
 
 app.set('view engine', 'ejs');
-
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -41,7 +35,6 @@ app.get('/chaveamento/campeao', (req, res) => {
     res.render('chave/campeao')
 })
 
-
 app.get('/adm/index', (req, res) => {
     res.render('adm/index')
 })
@@ -50,21 +43,12 @@ app.get('/adm/create', (req, res) => {
     res.render('adm/criaTorneio')
 })
 
-
-
-
-// carregando arquivos estaticos no express
 app.use(express.static('public'))
-
-// configurar body-parser
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
     extended: false
 }));
-app.use(bodyParser.json());
+app.use(express.json());
 
-
-
-// iniciar aplicacao 
 app.listen(8080, () => {
     console.log('servidor aberto na porta 8080')
 });

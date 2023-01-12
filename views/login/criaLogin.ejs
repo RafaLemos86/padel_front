@@ -13,10 +13,20 @@
             </h2>
         </div>
         <div class="card-body">
-            <form action="/users/create" method="post">
+            <form name="registerForm">
+                <input class="form-control" type="text" name="name" placeholder="Fulaninho">
+                <br>
+                <input class="form-control" type="text" name="cpf" placeholder="12345678910">
+                <br>
                 <input class="form-control" type="email" name="email" placeholder="email@example.com">
                 <br>
                 <input class="form-control" type="password" name="password" placeholder="*********">
+                <br>
+                <input class="form-control" type="text" name="sex" placeholder="M">
+                <br>
+                <input class="form-control" type="text" name="category" placeholder="Beginner">
+                <br>
+                <input class="form-control" type="number" name="points" placeholder="19">
                 <br>
                 <button type="submit" class="btn btn-success btn-block">
                     Criar
@@ -25,5 +35,29 @@
         </div>        
     </div>
 </div>
+
+<script defer>
+    const form = document.forms.registerForm;
+
+    form.addEventListener('submit', async (e) => {
+        const { name, cpf, email, password, sex, category, points } = form;
+
+        const response = await fetch('localhost:3000/users/crete', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify({
+                name,
+                cpf,
+                email,
+                password,
+                sex,
+                category,
+                points,
+            }),
+        });
+    });
+</script>
 
 <%- include ('../partials/footer.ejs') %>
